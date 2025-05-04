@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vastra Family Shoppy - Discover our wide range of accessories. From hats to bags, find the perfect accessory to complete your look." />
+  <meta name="keywords" content="accessories, bags, hats, jewelry, fashion, Vastra Family Shoppy" />
+  <meta name="author" content="Vastra Family Shoppy" />
+  <title>Vastra Family Shoppy - Accessories</title>
+  <!-- Link to the accessories.css file (assumed to be in the same directory as accessories.html) -->
+  <link rel="stylesheet" href="accessories.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Vastra Family Shoppy</h1>
+      <nav role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="kids.html">Kids</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <input type="text" placeholder="Search for products..." id="searchBar" aria-label="Search for products" />
+          </li>
+          <li><a href="../cart.html">Cart</a></li>
+          <li><a href="../login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h2>Accessories Collection</h2>
+        <p>Complete your look with our stylish range of accessories!</p>
+        <a href="accessories.html" class="shop-now">Shop Now</a>
+      </div>
+    </section>
+    
+    <!-- Featured Accessories Section -->
+    <section id="products">
+      <div class="container">
+        <h2>Featured Accessories</h2>
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product">
+            <img src="../images/accessories1.jpg" alt="Leather Belt" />
+            <h3>Leather Belt</h3>
+            <p>$24.99</p>
+            <a href="#" class="shop-now">Buy Now</a>
+          </div>
+          <!-- Product 2 -->
+          <div class="product">
+            <img src="../images/accessories2.jpg" alt="Stylish Hat" />
+            <h3>Stylish Hat</h3>
+            <p>$19.99</p>
+            <a href="#" class="shop-now">Buy Now</a>
+          </div>
+          <!-- Product 3 -->
+          <div class="product">
+            <img src="../images/accessories3.jpg" alt="Elegant Scarf" />
+            <h3>Elegant Scarf</h3>
+            <p>$29.99</p>
+            <a href="#" class="shop-now">Buy Now</a>
+          </div>
+          <!-- Product 4 -->
+          <div class="product">
+            <img src="../images/accessories4.jpg" alt="Classic Watch" />
+            <h3>Classic Watch</h3>
+            <p>$99.99</p>
+            <a href="#" class="shop-now">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Vastra Family Shoppy | All Rights Reserved</p>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </footer>
+  </main>
+  
+  <script src="../script.js"></script>
+  <script>
+    // Search Bar Functionality
+    document.getElementById('searchBar').addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+      const products = document.querySelectorAll('.product');
+      products.forEach(product => {
+        const productName = product.textContent.toLowerCase();
+        product.style.display = productName.includes(searchTerm) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

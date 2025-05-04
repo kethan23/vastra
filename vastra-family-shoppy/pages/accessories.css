@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+    background-color: #fdf5e6; /* Light Cream */
+    color: #4e2d24; /* Deep Brown */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #5a3e36;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  /* Header */
+  header {
+    background-color: #5a3e36; /* Rich Brown */
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li a {
+    font-weight: bold;
+    transition: color 0.3s ease;
+    color: white;
+  }
+  
+  nav ul li a:hover {
+    color: #e7d8c9; /* Soft Cream */
+  }
+  
+  #searchBar {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #e7d8c9; /* Soft Cream */
+    text-align: center;
+    padding: 60px 20px;
+    color: #4e2d24;
+  }
+  
+  .hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .shop-now {
+    background-color: #4e2d24; /* Deep Brown */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .shop-now:hover {
+    background-color: #3b2119; /* Darker Brown */
+  }
+  
+  /* Featured Products */
+  #products {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  #products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .product:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .product h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .product p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .product a.shop-now {
+    background-color: #5a3e36;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .product a.shop-now:hover {
+    background-color: #3b2119;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #5a3e36;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  footer ul li a {
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  footer ul li a:hover {
+    color: #e7d8c9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    nav ul {
+      gap: 10px;
+    }
+  
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .product-grid {
+      gap: 15px;
+    }
+  
+    .product {
+      width: 100%;
+    }
+  
+    .product h3 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero h2 {
+      font-size: 1.5rem;
+    }
+  
+    .hero p {
+      font-size: 0.9rem;
+    }
+  
+    .product {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .product h3 {
+      font-size: 1rem;
+    }
+  }
+  

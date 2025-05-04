@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vastra Family Shoppy - Your one-stop shop for trendy fashion for men, women, and kids. Explore our latest collections and exclusive offers!">
+    <meta name="keywords" content="fashion, clothing, men, women, kids, accessories, offers">
+    <meta name="author" content="Vastra Family Shoppy">
+    <title>Vastra Family Shoppy</title>
+    <!-- Ensure the path is correct for your CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <div class="container">
+            <h1>Vastra Family Shoppy</h1>
+            <nav role="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/men.html">Men</a></li>
+                    <li><a href="pages/women.html">Women</a></li>
+                    <li><a href="pages/kids.html">Kids</a></li>
+                    <li><a href="pages/accessories.html">Accessories</a></li>
+                    <li><a href="pages/offers.html">Offers</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><input type="text" placeholder="Search for products..." id="searchBar" aria-label="Search for products"></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="login.html">Login</a></li> <!-- Link to Login Page -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2>Trending Now</h2>
+                <p>Discover the latest trends in fashion for the whole family!</p>
+                <a href="pages/men.html" class="shop-now">Shop Now</a>
+            </div>
+        </section>
+        
+        <!-- Featured Categories Section -->
+        <section class="featured-categories">
+            <div class="container">
+                <h2>Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category"><a href="pages/men.html">Men</a></div>
+                    <div class="category"><a href="pages/women.html">Women</a></div>
+                    <div class="category"><a href="pages/kids.html">Kids</a></div>
+                    <div class="category"><a href="pages/accessories.html">Accessories</a></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bestsellers Section -->
+        <section class="bestsellers">
+            <div class="container">
+                <h2>Top Selling Products</h2>
+                <div class="product-grid">
+                    <div class="product">Product 1</div>
+                    <div class="product">Product 2</div>
+                    <div class="product">Product 3</div>
+                    <div class="product">Product 4</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Customer Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p>"Amazing quality and fast delivery!"</p>
+                        <p><strong>- John Doe</strong></p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Best shopping experience ever!"</p>
+                        <p><strong>- Jane Smith</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vastra Family Shoppy | All Rights Reserved</p>
+            <ul>
+                <li><a href="pages/about.html">About Us</a></li>
+                <li><a href="pages/privacy.html">Privacy Policy</a></li>
+                <li><a href="pages/terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript for Search Bar Functionality
+        document.getElementById('searchBar').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                const productName = product.textContent.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

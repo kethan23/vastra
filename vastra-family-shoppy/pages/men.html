@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover our exclusive men's collection at Vastra Family Shoppy. Shop the latest trends in men's fashion.">
+  <meta name="keywords" content="men, fashion, clothing, trends, Vastra Family Shoppy">
+  <meta name="author" content="Vastra Family Shoppy">
+  <title>Men's Wear - Vastra Family Shoppy</title>
+  <!-- Ensure the path is correct based on your project structure -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Vastra Family Shoppy</h1>
+      <nav role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="kids.html">Kids</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <input type="text" placeholder="Search for products..." id="searchBar" aria-label="Search for products">
+          </li>
+          <li><a href="../cart.html">Cart</a></li>
+          <li><a href="../login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Men's Hero Section -->
+    <section class="hero" style="background-image: url('../images/men-hero.jpg'); background-size: cover; background-position: center;">
+      <div class="container" style="background: rgba(231, 216, 201, 0.8); padding: 20px; border-radius: 10px;">
+        <h2>Men's Collection</h2>
+        <p>Upgrade your style with our latest trends in men's wear.</p>
+        <a href="#products" class="shop-now">Shop Now</a>
+      </div>
+    </section>
+    
+    <!-- Featured Men's Products Section -->
+    <section id="products" class="bestsellers">
+      <div class="container">
+        <h2>Featured Men's Products</h2>
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product">
+            <img src="../images/men1.jpg" alt="Men's Jacket" style="width: 100%; border-radius: 10px;">
+            <h3>Men's Jacket</h3>
+            <p>$79.99</p>
+            <a href="#" class="shop-now" style="padding: 8px 16px; font-size: 14px;">Buy Now</a>
+          </div>
+          <!-- Product 2 -->
+          <div class="product">
+            <img src="../images/men2.jpg" alt="Casual Shirt" style="width: 100%; border-radius: 10px;">
+            <h3>Casual Shirt</h3>
+            <p>$39.99</p>
+            <a href="#" class="shop-now" style="padding: 8px 16px; font-size: 14px;">Buy Now</a>
+          </div>
+          <!-- Product 3 -->
+          <div class="product">
+            <img src="../images/men3.jpg" alt="Formal Suit" style="width: 100%; border-radius: 10px;">
+            <h3>Formal Suit</h3>
+            <p>$149.99</p>
+            <a href="#" class="shop-now" style="padding: 8px 16px; font-size: 14px;">Buy Now</a>
+          </div>
+          <!-- Product 4 -->
+          <div class="product">
+            <img src="../images/men4.jpg" alt="Denim Jeans" style="width: 100%; border-radius: 10px;">
+            <h3>Denim Jeans</h3>
+            <p>$59.99</p>
+            <a href="#" class="shop-now" style="padding: 8px 16px; font-size: 14px;">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Men's Categories Section -->
+    <section class="featured-categories">
+      <div class="container">
+        <h2>Explore Men's Categories</h2>
+        <div class="category-grid">
+          <div class="category"><a href="#">Shirts</a></div>
+          <div class="category"><a href="#">Trousers</a></div>
+          <div class="category"><a href="#">Jackets</a></div>
+          <div class="category"><a href="#">Accessories</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Vastra Family Shoppy | All Rights Reserved</p>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+  
+  <script src="../script.js"></script>
+  <script>
+    // Search Bar Functionality
+    document.getElementById('searchBar').addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      const products = document.querySelectorAll('.product');
+      products.forEach(product => {
+        const productName = product.textContent.toLowerCase();
+        product.style.display = productName.includes(searchTerm) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
